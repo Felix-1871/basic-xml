@@ -1,0 +1,12 @@
+<root>
+    <person>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <age>30</age>
+    </person>
+    <person>
+        <firstName>Jane</firstName>
+        <lastName>Doe</lastName>
+        <age>25</age>
+    </person>
+    </root>
