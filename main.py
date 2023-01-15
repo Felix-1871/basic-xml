@@ -30,15 +30,15 @@ def _read():
         case 'firstName':
          number = input('Z ktorej pozycji chcesz odczytac dane? ')
          firstName = root.xpath('//firstName')
-         print(firstName[number].text) 
+         print(firstName[int(number)].text) 
         case 'lastName':
             number = input('Z ktorej pozycji chcesz odczytac dane? ')
             lastName = root.xpath('//lastName')
-            print(lastName[number].text) 
+            print(lastName[int(number)].text) 
         case 'age':
             number = input('Z ktorej pozycji chcesz odczytac dane? ')
             age = root.xpath('//age')
-            print(age[number].text) 
+            print(age[int(number)].text) 
 
 def _update():
     #update element
@@ -51,12 +51,12 @@ def _delete():
 derp = input('Co chcesz zrobić? ')
 match derp:
     case 'update':
-        _update
+        _update()
     case 'create':
-        _create
+        _create()
     case 'read':
-        _read
+        _read()
     case 'delete':
-        _delete
+        _delete()
     case _:
         print('Nieznana komenda, spróbuj jeszcze raz')
