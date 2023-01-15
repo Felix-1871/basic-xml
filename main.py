@@ -11,11 +11,11 @@ def _create():
     # create new elements
     new_person = etree.Element("person")
     firstName = etree.SubElement(new_person, "firstName")
-    firstName.text = "Jane"
+    firstName.text = input("Podaj imie: ")
     lastName = etree.SubElement(new_person, "lastName")
-    lastName.text = "Smith"
+    lastName.text = input("Podaj nazwisko: ")
     age = etree.SubElement(new_person, "age")
-    age.text = "35"
+    age.text = input("Podaj wiek: ")
 
     # add new element to the root element
     root.append(new_person)
