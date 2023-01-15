@@ -25,9 +25,20 @@ def _create():
     print('poprawnie stworzono element :)')
 
 def _read():
-    #read element
-    firstName = root.xpath('//firstName')
-    print(firstName[0].text) # John
+    blabla = input('Co chcesz odczytać? ')
+    match blabla:
+        case 'firstName':
+         number = input('Z ktorej pozycji chcesz odczytac dane? ')
+         firstName = root.xpath('//firstName')
+         print(firstName[number].text) 
+        case 'lastName':
+            number = input('Z ktorej pozycji chcesz odczytac dane? ')
+            lastName = root.xpath('//lastName')
+            print(lastName[number].text) 
+        case 'age':
+            number = input('Z ktorej pozycji chcesz odczytac dane? ')
+            age = root.xpath('//age')
+            print(age[number].text) 
 
 def _update():
     #update element
