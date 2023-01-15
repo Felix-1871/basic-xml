@@ -37,14 +37,15 @@ def _delete():
 
     print('tu bedzie delete')
 
-derp = input('Co chcesz zrobic? ')
-if(derp == 'create'):
-    _create()
-elif(derp == 'read'):
-    _read()
-elif(derp == 'update'):
-    _update()
-elif(derp == 'delete'):
-    _delete()
-else:
-    print('NIepoprawna komenda, upewnij sie ze poprawnie wpisujesz komende')
+derp = input('Co chcesz zrobić? ')
+match derp:
+    case 'update':
+        _update
+    case 'create':
+        _create
+    case 'read':
+        _read
+    case 'delete':
+        _delete
+    case _:
+        print('Nieznana komenda, spróbuj jeszcze raz')
